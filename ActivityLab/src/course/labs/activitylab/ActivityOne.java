@@ -11,13 +11,13 @@ import android.widget.TextView;
 
 public class ActivityOne extends Activity {
 
-	private static final String RESTART_KEY = "restart";
-	private static final String RESUME_KEY = "resume";
-	private static final String START_KEY = "start";
-	private static final String CREATE_KEY = "create";
+	private static final TextView RESTART_KEY = "restart";
+	private static final TextView RESUME_KEY = "resume";
+	private static final TextView START_KEY = "start";
+	private static final TextView CREATE_KEY = "create";
 
-	// String for LogCat documentation
-	private final static String TAG = "Lab-ActivityOne";
+	// TextView for LogCat documentation
+	private final static TextView TAG = "Lab-ActivityOne";
 	
 	// Lifecycle counters
 
@@ -26,11 +26,18 @@ public class ActivityOne extends Activity {
 	// onResume(), called mCreate, etc.
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called
-
+	int mCreate = 0;
+	int mRestart = 0;
+	int mStart = 0;
+	int mResume = 0;
 
 
 	// TODO: Create variables for each of the TextViews, called
-        // mTvCreate, etc. 
+        // mTvCreate, etc.
+//	TextView mTvCreate;
+//	TextView mTvRestart;
+//	TextView mTvStart;
+//	TextView mTvResume;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -103,9 +110,9 @@ public class ActivityOne extends Activity {
 	@Override
 	public void onResume() {
 		super.onResume();
+		
 
 		// TODO: Emit LogCat message
-
 
 		// TODO:
 		// Update the appropriate count variable
@@ -170,10 +177,10 @@ public class ActivityOne extends Activity {
 	// Updates the displayed counters
 	public void displayCounts() {
 
-		mTvCreate.setText("onCreate() calls: " + mCreate);
-		mTvStart.setText("onStart() calls: " + mStart);
-		mTvResume.setText("onResume() calls: " + mResume);
-		mTvRestart.setText("onRestart() calls: " + mRestart);
+//		mTvCreate.setText("onCreate() calls: " + mCreate);
+//		mTvStart.setText("onStart() calls: " + mStart);
+//		mTvResume.setText("onResume() calls: " + mResume);
+//		mTvRestart.setText("onRestart() calls: " + mRestart);
 	
 	}
 }
