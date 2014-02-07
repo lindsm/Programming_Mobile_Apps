@@ -34,10 +34,10 @@ public class ActivityOne extends Activity {
 
 	// TODO: Create variables for each of the TextViews, called
         // mTvCreate, etc.
-//	TextView mTvCreate;
-//	TextView mTvRestart;
-//	TextView mTvStart;
-//	TextView mTvResume;
+	TextView mTvCreate = new Textview();
+	TextView mTvRestart = new Textview();
+	TextView mTvStart = new Textview();
+	TextView mTvResume = new Textview();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +84,7 @@ public class ActivityOne extends Activity {
 
 
 		// TODO:
-		// Update the appropriate count variable
+		++mCreate;
 		// Update the user interface via the displayCounts() method
 
 
@@ -103,7 +103,7 @@ public class ActivityOne extends Activity {
 		// TODO:
 		// Update the appropriate count variable
 		// Update the user interface
-
+		mStart ++;
 
 	}
 
@@ -115,9 +115,8 @@ public class ActivityOne extends Activity {
 		// TODO: Emit LogCat message
 
 		// TODO:
-		// Update the appropriate count variable
 		// Update the user interface
-
+		mResume ++;
 
 	}
 
@@ -145,7 +144,7 @@ public class ActivityOne extends Activity {
 
 
 		// TODO:
-		// Update the appropriate count variable
+		++mRestart;
 		// Update the user interface
 
 
@@ -177,10 +176,10 @@ public class ActivityOne extends Activity {
 	// Updates the displayed counters
 	public void displayCounts() {
 
-//		mTvCreate.setText("onCreate() calls: " + mCreate);
-//		mTvStart.setText("onStart() calls: " + mStart);
-//		mTvResume.setText("onResume() calls: " + mResume);
-//		mTvRestart.setText("onRestart() calls: " + mRestart);
+		mTvCreate.setText("onCreate() calls: " + mCreate);
+		mTvStart.setText("onStart() calls: " + mStart);
+		mTvResume.setText("onResume() calls: " + mResume);
+		mTvRestart.setText("onRestart() calls: " + mRestart);
 	
 	}
 }
